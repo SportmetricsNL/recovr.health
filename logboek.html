@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recovery.health | Logboek</title>
+    <meta name="description" content="Dagelijks logboek met vragenlijsten voor herstelmonitoring." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="app-page" data-page="logboek">
+    <header class="topbar app-topbar">
+      <div class="container nav-shell app-shell-narrow">
+        <a href="./index.html" class="brand" aria-label="Recovery.health home">
+          <span class="logo-box" aria-hidden="true">
+            <svg viewBox="0 0 100 100" role="img">
+              <path
+                d="M8 56h18l8-26 13 45 12-26h33"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </span>
+          <span>Recovr.</span>
+        </a>
+
+        <button class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="main-nav" id="main-nav">
+          <a href="./index.html" data-page-link="dashboard">Dashboard</a>
+          <a href="./intake.html" data-page-link="intake">Fase aanpassen</a>
+          <a href="./logboek.html" data-page-link="logboek">Logboek</a>
+          <a href="./community.html" data-page-link="community">Community</a>
+          <a href="./executive.html" data-page-link="executive">Executive</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="app-main">
+      <div class="app-shell">
+        <header class="app-title-block">
+          <h1>Logboek en questionnaires</h1>
+          <p>Leg dagelijks vast hoe het gaat en vul de relevante vragenlijsten in voor objectieve opvolging.</p>
+        </header>
+
+        <section class="log-layout">
+          <article class="log-form-card">
+            <h2>Daglog</h2>
+            <div class="field-row">
+              <label for="pain-score" class="field-title">Pijnscore vandaag (VAS)</label>
+              <input id="pain-score" class="field-input" type="range" min="0" max="10" value="4" />
+            </div>
+            <div class="field-row">
+              <label for="sleep-hours" class="field-title">Slaap (uren)</label>
+              <input id="sleep-hours" class="field-input" type="number" min="0" max="14" value="7" />
+            </div>
+            <div class="field-row">
+              <label for="activity-level" class="field-title">Activiteit</label>
+              <select id="activity-level" class="field-input">
+                <option>Laag (0-3000 stappen)</option>
+                <option selected>Gemiddeld (3000-6000 stappen)</option>
+                <option>Hoog (6000+ stappen)</option>
+              </select>
+            </div>
+            <div class="field-row">
+              <label for="log-note" class="field-title">Notitie</label>
+              <textarea id="log-note" class="field-input field-textarea" placeholder="Wat ging goed en wat wil je bespreken?"></textarea>
+            </div>
+            <button class="btn btn-primary" type="button">Log opslaan</button>
+          </article>
+
+          <article class="questionnaire-card">
+            <h2>Questionnaires</h2>
+            <div class="question-item">
+              <h3>KOOS - kniefunctie</h3>
+              <p>Hoeveel last heb je bij traplopen?</p>
+              <div class="inline-options">
+                <label><input name="koos" type="radio" /> Geen</label>
+                <label><input name="koos" type="radio" checked /> Licht</label>
+                <label><input name="koos" type="radio" /> Matig</label>
+                <label><input name="koos" type="radio" /> Ernstig</label>
+              </div>
+            </div>
+            <div class="question-item">
+              <h3>VAS ochtendpijn</h3>
+              <p>Hoeveel pijn had je bij opstaan?</p>
+              <input class="field-input" type="range" min="0" max="10" value="3" />
+            </div>
+            <div class="question-item">
+              <h3>Mentale belasting</h3>
+              <p>Hoeveel stress over je herstel ervaar je vandaag?</p>
+              <div class="inline-options">
+                <label><input name="stress" type="radio" /> Laag</label>
+                <label><input name="stress" type="radio" checked /> Gemiddeld</label>
+                <label><input name="stress" type="radio" /> Hoog</label>
+              </div>
+            </div>
+            <button class="btn btn-ghost" type="button">Questionnaires verzenden</button>
+          </article>
+        </section>
+
+        <section class="entry-history-card">
+          <h2>Recente logs</h2>
+          <div class="entry-item">
+            <strong>Maandag</strong>
+            <span>VAS 4/10, 5100 stappen, slaap 7.1 uur</span>
+          </div>
+          <div class="entry-item">
+            <strong>Zondag</strong>
+            <span>VAS 5/10, 4300 stappen, slaap 6.6 uur</span>
+          </div>
+          <div class="entry-item">
+            <strong>Zaterdag</strong>
+            <span>VAS 3/10, 6200 stappen, slaap 7.8 uur</span>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

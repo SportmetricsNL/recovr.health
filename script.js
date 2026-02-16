@@ -1,6 +1,6 @@
 const toggleBtn = document.getElementById("menu-toggle");
 const mainNav = document.getElementById("main-nav");
-const allNavLinks = Array.from(document.querySelectorAll(".main-nav a, .icon-nav a, .mini-links a"));
+const allNavLinks = Array.from(document.querySelectorAll(".main-nav a"));
 const bodyPage = document.body.getAttribute("data-page");
 
 if (toggleBtn && mainNav) {
@@ -25,36 +25,6 @@ allNavLinks.forEach((link) => {
   }
 });
 
-const sectionLinks = Array.from(document.querySelectorAll(".main-nav a[href^='#']"));
-const sections = Array.from(document.querySelectorAll("section[id]"));
-
-const activateSectionLink = (id) => {
-  sectionLinks.forEach((link) => {
-    const hash = link.getAttribute("href");
-    link.classList.toggle("is-active", hash === `#${id}`);
-  });
-};
-
-if (sectionLinks.length && sections.length && "IntersectionObserver" in window) {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      const visible = entries
-        .filter((entry) => entry.isIntersecting)
-        .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
-
-      if (visible.length) {
-        activateSectionLink(visible[0].target.id);
-      }
-    },
-    {
-      threshold: [0.3, 0.55],
-      rootMargin: "-15% 0px -45% 0px",
-    }
-  );
-
-  sections.forEach((section) => observer.observe(section));
-}
-
 const phaseButtons = Array.from(document.querySelectorAll(".phase-chip"));
 phaseButtons.forEach((button) => {
   button.addEventListener("click", () => {
@@ -63,10 +33,60 @@ phaseButtons.forEach((button) => {
   });
 });
 
-const tabs = Array.from(document.querySelectorAll(".tab"));
-tabs.forEach((tab) => {
-  tab.addEventListener("click", () => {
-    tabs.forEach((item) => item.classList.remove("is-active"));
-    tab.classList.add("is-active");
+const complaintButtons = Array.from(document.querySelectorAll("[data-complaint-filter]"));
+const regionFilter = document.getElementById("region-filter");
+const communityCards = Array.from(document.querySelectorAll(".community-card"));
+const communityCount = document.getElementById("community-count");
+const emptyState = document.getElementById("community-empty");
+
+let selectedComplaint = "all";
+
+const applyCommunityFilters = () => {
+  if (!communityCards.length) {
+    return;
+  }
+
+  const selectedRegion = regionFilter ? regionFilter.value : "all";
+  let visibleCount = 0;
+
+  communityCards.forEach((card) => {
+    const cardRegion = (card.dataset.region || "all").trim();
+    const cardComplaints = (card.dataset.complaints || "")
+      .split(",")
+      .map((item) => item.trim())
+      .filter(Boolean);
+
+    const matchRegion = selectedRegion === "all" || cardRegion === selectedRegion || cardRegion === "all";
+    const matchComplaint = selectedComplaint === "all" || cardComplaints.includes(selectedComplaint);
+
+    const isVisible = matchRegion && matchComplaint;
+    card.hidden = !isVisible;
+
+    if (isVisible) {
+      visibleCount += 1;
+    }
+  });
+
+  if (communityCount) {
+    communityCount.textContent = String(visibleCount);
+  }
+
+  if (emptyState) {
+    emptyState.hidden = visibleCount !== 0;
+  }
+};
+
+complaintButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    selectedComplaint = button.dataset.complaintFilter || "all";
+    complaintButtons.forEach((item) => item.classList.remove("is-active"));
+    button.classList.add("is-active");
+    applyCommunityFilters();
   });
 });
+
+if (regionFilter) {
+  regionFilter.addEventListener("change", applyCommunityFilters);
+}
+
+applyCommunityFilters();

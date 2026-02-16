@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recovery.health | Community</title>
+    <meta
+      name="description"
+      content="Community based ervaringen filteren op regio en klachten voor relevantere herstelinzichten."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="app-page" data-page="community">
+    <header class="topbar app-topbar">
+      <div class="container nav-shell app-shell-narrow">
+        <a href="./index.html" class="brand" aria-label="Recovery.health home">
+          <span class="logo-box" aria-hidden="true">
+            <svg viewBox="0 0 100 100" role="img">
+              <path
+                d="M8 56h18l8-26 13 45 12-26h33"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </span>
+          <span>Recovr.</span>
+        </a>
+
+        <button class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="main-nav" id="main-nav">
+          <a href="./index.html" data-page-link="dashboard">Dashboard</a>
+          <a href="./intake.html" data-page-link="intake">Fase aanpassen</a>
+          <a href="./logboek.html" data-page-link="logboek">Logboek</a>
+          <a href="./community.html" data-page-link="community">Community</a>
+          <a href="./executive.html" data-page-link="executive">Executive</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="app-main">
+      <div class="app-shell">
+        <header class="app-title-block">
+          <h1>Community per regio en klacht</h1>
+          <p>Krijg ervaringen te zien van mensen met vergelijkbare klachten in jouw regio.</p>
+        </header>
+
+        <section class="community-toolbar">
+          <div class="toolbar-block">
+            <label for="region-filter" class="field-title">Regio</label>
+            <select id="region-filter" class="field-input">
+              <option value="all" selected>Alle regio's</option>
+              <option value="noord">Noord</option>
+              <option value="oost">Oost</option>
+              <option value="west">West</option>
+              <option value="zuid">Zuid</option>
+            </select>
+          </div>
+
+          <div class="toolbar-block">
+            <span class="field-title">Klacht</span>
+            <div class="chip-group">
+              <button class="chip-btn is-active" type="button" data-complaint-filter="all">Alles</button>
+              <button class="chip-btn" type="button" data-complaint-filter="knie">Knie</button>
+              <button class="chip-btn" type="button" data-complaint-filter="rug">Rug</button>
+              <button class="chip-btn" type="button" data-complaint-filter="schouder">Schouder</button>
+              <button class="chip-btn" type="button" data-complaint-filter="postcovid">Post-COVID</button>
+            </div>
+          </div>
+        </section>
+
+        <p class="result-line">Resultaten: <strong id="community-count">6</strong> topics</p>
+
+        <section class="community-grid" id="community-grid">
+          <article class="community-card" data-region="west" data-complaints="knie">
+            <div class="community-meta">
+              <span class="k-label">West</span>
+              <span class="status-pill">Knie</span>
+            </div>
+            <h3>Zwelling na traplopen in week 4</h3>
+            <p>31 reacties, 12 bruikbare adviezen, 3 fysio-notities.</p>
+          </article>
+
+          <article class="community-card" data-region="zuid" data-complaints="knie,schouder">
+            <div class="community-meta">
+              <span class="k-label">Zuid</span>
+              <span class="status-pill">Knie + Schouder</span>
+            </div>
+            <h3>Veilige opbouw richting sporthervatting</h3>
+            <p>18 reacties, met herstelplanning per week.</p>
+          </article>
+
+          <article class="community-card" data-region="oost" data-complaints="rug">
+            <div class="community-meta">
+              <span class="k-label">Oost</span>
+              <span class="status-pill">Rug</span>
+            </div>
+            <h3>Werkhervatting met lage rugklachten</h3>
+            <p>44 reacties, ergonomie tips en belastinggrenzen.</p>
+          </article>
+
+          <article class="community-card" data-region="noord" data-complaints="postcovid">
+            <div class="community-meta">
+              <span class="k-label">Noord</span>
+              <span class="status-pill">Post-COVID</span>
+            </div>
+            <h3>Omgaan met energiedips en slaap</h3>
+            <p>29 reacties, pacing-schema's en rustvensters.</p>
+          </article>
+
+          <article class="community-card" data-region="west" data-complaints="schouder">
+            <div class="community-meta">
+              <span class="k-label">West</span>
+              <span class="status-pill">Schouder</span>
+            </div>
+            <h3>Beperkte overhead mobiliteit na week 8</h3>
+            <p>23 reacties, met oefenvarianten per fase.</p>
+          </article>
+
+          <article class="community-card" data-region="all" data-complaints="knie,rug,schouder,postcovid">
+            <div class="community-meta">
+              <span class="k-label">Landelijk</span>
+              <span class="status-pill">Meerdere klachten</span>
+            </div>
+            <h3>Checklist: wat bespreek je met je fysio?</h3>
+            <p>65 reacties, geordend op klacht en herstelweek.</p>
+          </article>
+        </section>
+
+        <section class="empty-state" id="community-empty" hidden>
+          <h2>Geen topics gevonden</h2>
+          <p>Probeer een andere regio of kies een bredere klachtfilter.</p>
+        </section>
+      </div>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Recovery.health | Structured Recovery Ecosystem</title>
+    <title>Recovery.health | Dashboard</title>
     <meta
       name="description"
-      content="Recovery.health helpt patienten van diagnose naar regie met ervaringskennis, medische data en slimme monitoring."
+      content="Recovery.health dashboard: herstelstatus, fasebeheer, logboek en community-inzichten op een plek."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,12 +16,12 @@
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body data-page="landing">
+  <body class="app-page" data-page="dashboard">
     <div class="bg-orb orb-a"></div>
     <div class="bg-orb orb-b"></div>
 
-    <header class="topbar" id="top">
-      <div class="container nav-shell">
+    <header class="topbar app-topbar">
+      <div class="container nav-shell app-shell-narrow">
         <a href="./index.html" class="brand" aria-label="Recovery.health home">
           <span class="logo-box" aria-hidden="true">
             <svg viewBox="0 0 100 100" role="img">
@@ -35,7 +35,7 @@
               />
             </svg>
           </span>
-          <span>Recovery.health</span>
+          <span>Recovr.</span>
         </a>
 
         <button class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false">
@@ -45,180 +45,105 @@
         </button>
 
         <nav class="main-nav" id="main-nav">
-          <a href="#summary">Summary</a>
-          <a href="#probleem">Probleem</a>
-          <a href="#oplossing">Pilaren</a>
-          <a href="#business">Business</a>
-          <a href="./intake.html" data-page-link="intake">Intake</a>
-          <a href="./dashboard.html" data-page-link="dashboard">Dashboard</a>
-          <a href="./knowledge-tree.html" data-page-link="knowledge">Knowledge Tree</a>
+          <a href="./index.html" data-page-link="dashboard">Dashboard</a>
+          <a href="./intake.html" data-page-link="intake">Fase aanpassen</a>
+          <a href="./logboek.html" data-page-link="logboek">Logboek</a>
+          <a href="./community.html" data-page-link="community">Community</a>
+          <a href="./executive.html" data-page-link="executive">Executive</a>
         </nav>
       </div>
     </header>
 
-    <main>
-      <section class="hero container">
-        <p class="eyebrow">Executive Summary</p>
-        <h1>
-          Van <span class="accent">"lijden aan een diagnose"</span> naar
-          <span class="accent-strong">sturing geven aan herstel</span>.
-        </h1>
-        <p class="hero-copy">
-          Recovery.health combineert ervaringskennis met klinische data, zodat patienten tussen consulten door niet
-          in een informatie-vacuum vallen.
-        </p>
-        <div class="hero-actions">
-          <a href="#oplossing" class="btn btn-primary">Bekijk de 3 pilaren</a>
-          <a href="./intake.html" class="btn btn-ghost">Open product demo</a>
-        </div>
-        <div class="kpi-strip">
-          <article>
-            <strong>Structured Experience</strong>
-            <span>Gestructureerde kennisboom in plaats van ruis.</span>
-          </article>
-          <article>
-            <strong>Objective Data</strong>
-            <span>PROMs en wearable data in een begrijpelijke flow.</span>
-          </article>
-          <article>
-            <strong>Patient Empowerment</strong>
-            <span>Consult-voorbereiding met concrete export voor zorgverlener.</span>
-          </article>
-        </div>
-      </section>
+    <main class="app-main">
+      <div class="app-shell">
+        <section class="dash-head">
+          <div>
+            <p class="eyebrow">Mijn herstel</p>
+            <h1>Dashboard</h1>
+            <p class="dash-subcopy">Eerste scherm voor dagelijkse regie op herstel, data en voorbereiding van consulten.</p>
+          </div>
+          <div class="dash-head-actions">
+            <a href="./intake.html" class="btn btn-ghost">Fase aanpassen</a>
+            <a href="./logboek.html" class="btn btn-primary">Logboek + questionnaires</a>
+          </div>
+        </section>
 
-      <section class="section container" id="summary">
-        <div class="section-head">
-          <p class="eyebrow">Bedrijfsprofiel</p>
-          <h2>Executive Summary: Recovery.health</h2>
-        </div>
-        <article class="panel">
-          <h3>Missie</h3>
-          <p>
-            De transitie van "lijden aan een diagnose" naar "sturing geven aan herstel" door ervaringskennis te
-            combineren met klinische data.
-          </p>
-        </article>
-      </section>
-
-      <section class="section container" id="probleem">
-        <div class="section-head">
-          <p class="eyebrow">1. Het Probleem</p>
-          <h2>Het "Zwarte Gat" in de Zorg</h2>
-        </div>
-
-        <div class="grid three">
-          <article class="card">
-            <h3>Informatie-vacuum na diagnose</h3>
-            <p>Patienten vallen na een ingreep of diagnose in een onduidelijke fase zonder dagelijkse houvast.</p>
+        <section class="dash-grid">
+          <article class="timeline-card">
+            <div class="panel-head">
+              <h2>Voortgang tijdlijn</h2>
+              <span class="badge positive">Op schema</span>
+            </div>
+            <div class="timeline-placeholder">
+              <span>W1</span>
+              <span>W2</span>
+              <span>W3</span>
+              <span>W4</span>
+              <span>W5</span>
+              <span>W6</span>
+              <span>W7</span>
+            </div>
+            <div class="metric-row">
+              <div><small>Mobiliteit</small><strong>75 deg</strong></div>
+              <div><small>Pijn (VAS)</small><strong>4/10</strong></div>
+              <div><small>Slaapkwaliteit</small><strong>7.2</strong></div>
+            </div>
           </article>
-          <article class="card">
-            <h3>Feiten zonder context</h3>
-            <p>De medische wereld geeft fysiologie, maar mist concrete vertaling naar het dagelijks leven.</p>
-          </article>
-          <article class="card">
-            <h3>Ruis zonder validatie</h3>
-            <p>Het internet geeft forums en losse meningen, maar geen betrouwbare structuur.</p>
-          </article>
-        </div>
 
-        <article class="panel warning">
-          <h3>Gevolg</h3>
-          <p>Angst, suboptimaal herstel en een zorgverlener zonder zicht op wat er tussen consulten gebeurt.</p>
-        </article>
-      </section>
-
-      <section class="section container" id="oplossing">
-        <div class="section-head">
-          <p class="eyebrow">2. De Oplossing</p>
-          <h2>Structured Recovery Ecosystem in drie pilaren</h2>
-        </div>
-
-        <div class="stack">
-          <article class="pillar">
-            <div class="pillar-label">PILAAR A</div>
-            <h3>De Contextuele Kennisboom (Structured Experience)</h3>
+          <article class="focus-card">
+            <h2>Focus van deze week</h2>
             <ul>
-              <li><strong>Smart Entry:</strong> loggen op fase, doel en levensstijl.</li>
-              <li><strong>Dynamic Matching:</strong> inzichten van "mensen zoals jij" in dezelfde herstelweek.</li>
-              <li><strong>Kennis-accumulatie:</strong> beste inzichten blijven zichtbaar per node en verdwijnen niet.</li>
+              <li class="is-checked">Extensie (volledige strekking) bereiken.</li>
+              <li class="is-checked">Activatie van de quadriceps.</li>
+              <li>Start met stationair fietsen volgens schema.</li>
             </ul>
+            <a href="./community.html" class="btn btn-ghost">Bekijk community per klacht</a>
+          </article>
+        </section>
+
+        <section class="dash-bottom-grid">
+          <article class="info-card">
+            <h3>Nieuw in jouw fase</h3>
+            <div class="insight-item">
+              <span>Fysiek</span>
+              <strong>Zwelling beheersen</strong>
+              <small>124 mensen deelden dit in vergelijkbare weken</small>
+            </div>
+            <div class="insight-item">
+              <span>Mentaal</span>
+              <strong>Mentale dip rond week 6</strong>
+              <small>89 mensen deelden coping-strategieen</small>
+            </div>
           </article>
 
-          <article class="pillar">
-            <div class="pillar-label">PILAAR B</div>
-            <h3>De Monitoring Engine (Objective Data)</h3>
-            <ul>
-              <li><strong>PROMs-integratie:</strong> gevalideerde vragenlijsten op kritieke herstelmomenten.</li>
-              <li><strong>Wearable Sync:</strong> Apple Health en Google Fit data (stappen, slaap, HRV).</li>
-              <li><strong>Correlation:</strong> koppeling tussen gedrag en uitkomst, bijvoorbeeld stappen versus pijnscore.</li>
-            </ul>
+          <article class="info-card">
+            <h3>Voorbereiden op volgende afspraak</h3>
+            <div class="note-warning">Gisteren was pijn na wandelen 7/10. Neem dit mee naar fysio.</div>
+            <label class="check-row"><input type="checkbox" /> Vragen over kraken in de knie</label>
+            <label class="check-row"><input type="checkbox" /> Nieuw schema voor week 6-8</label>
+            <label class="check-row"><input type="checkbox" /> Vraag over belasting op trap</label>
           </article>
+        </section>
 
-          <article class="pillar">
-            <div class="pillar-label">PILAAR C</div>
-            <h3>De Patient Empowerment Tool</h3>
-            <ul>
-              <li>
-                <strong>Consult-voorbereider:</strong> export van logs en meetwaarden voor arts of fysiotherapeut.
-              </li>
-              <li><strong>Doel:</strong> betere consultkwaliteit en meer regie voor de patient.</li>
-            </ul>
+        <section class="quick-links-grid">
+          <article class="quick-link-card">
+            <h3>Fasebeheer</h3>
+            <p>Pas diagnose, fase en hoofddoel direct aan.</p>
+            <a href="./intake.html" class="btn btn-ghost">Open fasebeheer</a>
           </article>
-        </div>
-      </section>
-
-      <section class="section container" id="business">
-        <div class="section-head">
-          <p class="eyebrow">4. Business Design</p>
-          <h2>Waardecreatie via hybride model</h2>
-        </div>
-        <div class="grid three">
-          <article class="card">
-            <h3>B2C (Freemium)</h3>
-            <p>Basisomgeving gratis. Verdiepte benchmarks en uitgebreide rapportages voor de power-user.</p>
+          <article class="quick-link-card">
+            <h3>Logboek</h3>
+            <p>Vul je daglog en medische questionnaires in een flow in.</p>
+            <a href="./logboek.html" class="btn btn-ghost">Open logboek</a>
           </article>
-          <article class="card">
-            <h3>B2B (Provider Licenses)</h3>
-            <p>Dashboard voor klinieken en fysio-netwerken om patientstromen op afstand te monitoren.</p>
+          <article class="quick-link-card">
+            <h3>Community</h3>
+            <p>Filter ervaringen op regio en klachten die bij jou passen.</p>
+            <a href="./community.html" class="btn btn-ghost">Open community</a>
           </article>
-          <article class="card">
-            <h3>B2B (Life Sciences / RWE)</h3>
-            <p>Geanonimiseerde Real-World Evidence rapportages voor verzekeraars en fabrikanten.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section container" id="demo">
-        <div class="section-head">
-          <p class="eyebrow">Product Demo</p>
-          <h2>Voorbeeldflow in 3 schermen</h2>
-        </div>
-        <div class="grid three">
-          <article class="demo-card">
-            <h3>1. Intake</h3>
-            <p>Diagnose, fase en hersteldoel vastleggen in een begeleide setup.</p>
-            <a href="./intake.html" class="btn btn-primary">Open intake</a>
-          </article>
-          <article class="demo-card">
-            <h3>2. Dashboard</h3>
-            <p>Combinatie van objectieve data, focuspunten en consultvoorbereiding.</p>
-            <a href="./dashboard.html" class="btn btn-primary">Open dashboard</a>
-          </article>
-          <article class="demo-card">
-            <h3>3. Knowledge Tree</h3>
-            <p>Contextuele ervaringen per herstelweek, categorie en relevantie.</p>
-            <a href="./knowledge-tree.html" class="btn btn-primary">Open tree</a>
-          </article>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <div class="container">
-        <p>Recovery.health - Structured Recovery Ecosystem - 2026</p>
+        </section>
       </div>
-    </footer>
+    </main>
 
     <script src="./script.js"></script>
   </body>

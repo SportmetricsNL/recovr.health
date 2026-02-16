@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Recovery.health | Fase aanpassen</title>
+    <title>Recovery.health | Executive</title>
+    <meta
+      name="description"
+      content="Executive overzicht van de missie, het probleem en de productrichting van Recovery.health."
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,7 +16,7 @@
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body class="app-page" data-page="intake">
+  <body class="app-page" data-page="executive">
     <header class="topbar app-topbar">
       <div class="container nav-shell app-shell-narrow">
         <a href="./index.html" class="brand" aria-label="Recovery.health home">
@@ -48,43 +52,34 @@
     </header>
 
     <main class="app-main">
-      <div class="app-shell intake-wrap">
+      <div class="app-shell">
         <header class="app-title-block">
-          <h1>Fase aanpassen</h1>
-          <p>Werk diagnose, fase en hersteldoel bij. Deze keuzes sturen je dashboard en community suggesties.</p>
+          <p class="eyebrow">Executive pagina</p>
+          <h1>Recovery.health samenvatting</h1>
+          <p>Deze pagina staat bewust als laatste in de flow, na dashboard, fasebeheer, logboek en community.</p>
         </header>
 
-        <div class="step-meter" aria-hidden="true">
-          <span class="is-done"></span>
-          <span class="is-done"></span>
-          <span></span>
-        </div>
+        <section class="grid three exec-grid">
+          <article class="card">
+            <h3>Missie</h3>
+            <p>Van lijden aan een diagnose naar sturing geven aan herstel door ervaringskennis en klinische data te combineren.</p>
+          </article>
+          <article class="card">
+            <h3>Kernprobleem</h3>
+            <p>Patienten missen tussen consulten bruikbare context, terwijl zorgverleners weinig zicht hebben op dagelijkse progressie.</p>
+          </article>
+          <article class="card">
+            <h3>Productfocus</h3>
+            <p>Dagelijkse regie met dashboard, fasebeheer, logboek met questionnaires en community-inzichten op klacht/regio.</p>
+          </article>
+        </section>
 
-        <section class="intake-card">
-          <label for="diagnose" class="field-title">Wat is je diagnose?</label>
-          <select id="diagnose" class="field-input">
-            <option selected>Voorste Kruisband (VKB) reconstructie</option>
-            <option>Meniscus reparatie</option>
-            <option>Hernia (lage rug)</option>
-            <option>Post-COVID syndroom</option>
-            <option>Schouderinstabiliteit</option>
-          </select>
-
-          <div class="field-title">Welke fase zit je in?</div>
-          <div class="phase-list">
-            <button class="phase-chip is-active" type="button">Week 0-4 (net geopereerd)</button>
-            <button class="phase-chip" type="button">Week 4-8 (mobiliseren)</button>
-            <button class="phase-chip" type="button">Week 8-24 (krachtopbouw)</button>
-            <button class="phase-chip" type="button">Return to sport</button>
-          </div>
-
-          <label for="goal" class="field-title">Wat is je belangrijkste doel?</label>
-          <input id="goal" class="field-input" type="text" placeholder="Bv: weer voetballen en traplopen zonder pijn" />
-
-          <div class="dual-actions">
-            <a href="./index.html" class="btn btn-primary field-btn">Opslaan en terug naar dashboard</a>
-            <a href="./logboek.html" class="btn btn-ghost field-btn">Verder naar logboek</a>
-          </div>
+        <section class="panel">
+          <h2>Wat maakt dit sterk</h2>
+          <p>
+            Door persoonlijke logdata en community-ervaringen te combineren ontstaat continue feedback. Dat verlaagt onzekerheid,
+            ondersteunt therapietrouw en maakt consulten concreter.
+          </p>
         </section>
       </div>
     </main>
