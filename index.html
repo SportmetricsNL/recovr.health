@@ -71,18 +71,36 @@
         <section class="dash-grid">
           <article class="timeline-card">
             <div class="panel-head">
-              <h2>Voortgang tijdlijn</h2>
+              <h2>Hersteltrend</h2>
               <span class="badge positive">Op schema</span>
             </div>
-            <div class="timeline-placeholder">
-              <span>W1</span>
-              <span>W2</span>
-              <span>W3</span>
-              <span>W4</span>
-              <span>W5</span>
-              <span>W6</span>
-              <span>W7</span>
+
+            <div class="chart-shell">
+              <div class="chart-legend">
+                <span class="legend-item">
+                  <i class="legend-swatch is-mobility"></i>
+                  Mobiliteit (graden)
+                </span>
+                <span class="legend-item">
+                  <i class="legend-swatch is-pain"></i>
+                  Pijn (VAS)
+                </span>
+              </div>
+
+              <svg id="recovery-chart" class="recovery-chart" viewBox="0 0 760 280" aria-label="Herstelgrafiek"></svg>
+
+              <div class="chart-axis">
+                <span>W1</span>
+                <span>W2</span>
+                <span>W3</span>
+                <span>W4</span>
+                <span>W5</span>
+                <span>W6</span>
+                <span>W7</span>
+                <span>W8</span>
+              </div>
             </div>
+
             <div class="metric-row">
               <div><small>Mobiliteit</small><strong>75 deg</strong></div>
               <div><small>Pijn (VAS)</small><strong>4/10</strong></div>
@@ -138,7 +156,7 @@
           </article>
           <article class="quick-link-card">
             <h3>Community</h3>
-            <p>Filter ervaringen op regio en klachten die bij jou passen.</p>
+            <p>Filter ervaringen op regio en klachten en open details per topic.</p>
             <a href="./community.html" class="btn btn-ghost">Open community</a>
           </article>
         </section>

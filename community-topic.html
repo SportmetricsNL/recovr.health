@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recovery.health | Community topic</title>
+    <meta name="description" content="Detailpagina van community topics met concrete tips en samenvatting." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="app-page" data-page="community">
+    <header class="topbar app-topbar">
+      <div class="container nav-shell app-shell-narrow">
+        <a href="./index.html" class="brand" aria-label="Recovery.health home">
+          <span class="logo-box" aria-hidden="true">
+            <svg viewBox="0 0 100 100" role="img">
+              <path
+                d="M8 56h18l8-26 13 45 12-26h33"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </span>
+          <span>Recovr.</span>
+        </a>
+
+        <button class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="main-nav" id="main-nav">
+          <a href="./index.html" data-page-link="dashboard">Dashboard</a>
+          <a href="./intake.html" data-page-link="intake">Fase aanpassen</a>
+          <a href="./logboek.html" data-page-link="logboek">Logboek</a>
+          <a href="./community.html" data-page-link="community">Community</a>
+          <a href="./executive.html" data-page-link="executive">Executive</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="app-main">
+      <div class="app-shell">
+        <a href="./community.html" class="back-link">Terug naar community-overzicht</a>
+
+        <section class="topic-layout">
+          <article class="topic-main-card">
+            <p class="eyebrow" id="topic-region">Regio</p>
+            <h1 id="topic-title">Community topic</h1>
+            <p class="topic-subtitle" id="topic-subtitle">Laad topicgegevens...</p>
+
+            <div class="topic-tags" id="topic-tags"></div>
+
+            <h2>Samenvatting</h2>
+            <p class="topic-copy" id="topic-summary"></p>
+
+            <h2>Top inzichten uit de community</h2>
+            <ul class="topic-list" id="topic-insights"></ul>
+          </article>
+
+          <aside class="topic-side-card">
+            <h3>Topic statistiek</h3>
+            <div class="topic-stat">
+              <small>Reacties</small>
+              <strong id="topic-replies">-</strong>
+            </div>
+            <div class="topic-stat">
+              <small>Bruikbare adviezen</small>
+              <strong id="topic-helpful">-</strong>
+            </div>
+            <div class="topic-stat">
+              <small>Verwijzingen naar zorgverlener</small>
+              <strong id="topic-clinical">-</strong>
+            </div>
+            <a href="./logboek.html" class="btn btn-primary">Log je eigen ervaring</a>
+          </aside>
+        </section>
+      </div>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

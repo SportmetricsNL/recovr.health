@@ -895,3 +895,222 @@ p {
     gap: 0.2rem;
   }
 }
+
+.chart-shell {
+  margin: 1rem 0;
+  border: 1px solid #dbe4f4;
+  border-radius: var(--radius-md);
+  background: linear-gradient(180deg, #fbfdff 0%, #f2f6ff 100%);
+  padding: 0.9rem 0.9rem 0.6rem;
+}
+
+.chart-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-bottom: 0.6rem;
+}
+
+.legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: #425274;
+  font-weight: 700;
+  font-size: 0.92rem;
+}
+
+.legend-swatch {
+  width: 20px;
+  height: 4px;
+  border-radius: 999px;
+  display: inline-block;
+}
+
+.legend-swatch.is-mobility {
+  background: #2b63f3;
+}
+
+.legend-swatch.is-pain {
+  background: #f97316;
+}
+
+.recovery-chart {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.chart-axis {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  color: #8191b0;
+  font-weight: 700;
+  font-size: 0.82rem;
+  margin-top: 0.2rem;
+}
+
+.chart-axis span {
+  text-align: center;
+}
+
+.community-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.open-detail {
+  display: inline-block;
+  margin-top: 0.85rem;
+  color: var(--brand-deep);
+  font-family: "Sora", "Trebuchet MS", sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.open-detail::after {
+  content: " ->";
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-bottom: 0.9rem;
+  color: var(--brand-deep);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.back-link::before {
+  content: "<-";
+}
+
+.topic-layout {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 2fr 1fr;
+}
+
+.topic-main-card,
+.topic-side-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+.topic-main-card {
+  padding: 1.2rem;
+}
+
+.topic-subtitle {
+  margin-top: 0.45rem;
+  color: var(--muted);
+}
+
+.topic-tags {
+  margin-top: 0.8rem;
+  margin-bottom: 0.95rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.topic-tag {
+  border-radius: 999px;
+  padding: 0.26rem 0.62rem;
+  background: #eaf0ff;
+  color: #345491;
+  font-weight: 700;
+  font-size: 0.87rem;
+}
+
+.topic-copy {
+  margin-top: 0.5rem;
+  color: var(--muted);
+  line-height: 1.52;
+}
+
+.topic-list {
+  margin: 0.7rem 0 0;
+  padding-left: 1.06rem;
+}
+
+.topic-list li {
+  margin-bottom: 0.55rem;
+  color: #405071;
+}
+
+.topic-side-card {
+  padding: 1.2rem;
+  display: grid;
+  gap: 0.7rem;
+  align-content: start;
+}
+
+.topic-stat {
+  border: 1px solid #dce4f3;
+  border-radius: 11px;
+  padding: 0.6rem 0.72rem;
+}
+
+.topic-stat small {
+  display: block;
+  color: #6d7f9f;
+  margin-bottom: 0.2rem;
+}
+
+.topic-stat strong {
+  font-family: "Sora", "Trebuchet MS", sans-serif;
+  font-size: 1.35rem;
+}
+
+.history-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.9rem;
+  align-items: center;
+}
+
+.history-select {
+  width: 230px;
+}
+
+.history-chips {
+  margin-top: 0.85rem;
+}
+
+.entry-list {
+  margin-top: 0.55rem;
+}
+
+.entry-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.72rem 0;
+  border-top: 1px solid #e2e8f4;
+}
+
+.entry-item[hidden] {
+  display: none;
+}
+
+@media (max-width: 980px) {
+  .topic-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .history-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .history-select {
+    width: 100%;
+  }
+}

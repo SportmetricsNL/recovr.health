@@ -112,19 +112,61 @@
         </section>
 
         <section class="entry-history-card">
-          <h2>Recente logs</h2>
-          <div class="entry-item">
-            <strong>Maandag</strong>
-            <span>VAS 4/10, 5100 stappen, slaap 7.1 uur</span>
+          <div class="history-head">
+            <h2>Recente logs</h2>
+            <select id="history-period" class="field-input history-select" aria-label="Kies periode">
+              <option value="7">Laatste 7 dagen</option>
+              <option value="14" selected>Laatste 14 dagen</option>
+              <option value="30">Laatste 30 dagen</option>
+              <option value="60">Laatste 60 dagen</option>
+            </select>
           </div>
-          <div class="entry-item">
-            <strong>Zondag</strong>
-            <span>VAS 5/10, 4300 stappen, slaap 6.6 uur</span>
+
+          <div class="chip-group history-chips">
+            <button class="chip-btn is-active" type="button" data-history-tag="all">Alles</button>
+            <button class="chip-btn" type="button" data-history-tag="pain">Pijn</button>
+            <button class="chip-btn" type="button" data-history-tag="sleep">Slaap</button>
+            <button class="chip-btn" type="button" data-history-tag="activity">Activiteit</button>
+            <button class="chip-btn" type="button" data-history-tag="mental">Mentaal</button>
           </div>
-          <div class="entry-item">
-            <strong>Zaterdag</strong>
-            <span>VAS 3/10, 6200 stappen, slaap 7.8 uur</span>
+
+          <p class="result-line">Getoond: <strong id="history-count">7</strong> logs</p>
+
+          <div class="entry-list">
+            <article class="entry-item" data-days="1" data-tags="pain,sleep,activity">
+              <strong>Maandag</strong>
+              <span>VAS 4/10, 5100 stappen, slaap 7.1 uur</span>
+            </article>
+            <article class="entry-item" data-days="2" data-tags="pain,activity">
+              <strong>Zondag</strong>
+              <span>VAS 5/10, 4300 stappen, slaap 6.6 uur</span>
+            </article>
+            <article class="entry-item" data-days="3" data-tags="pain,sleep,activity">
+              <strong>Zaterdag</strong>
+              <span>VAS 3/10, 6200 stappen, slaap 7.8 uur</span>
+            </article>
+            <article class="entry-item" data-days="6" data-tags="sleep,mental">
+              <strong>Woensdag</strong>
+              <span>Stress hoog na fysio, slaap 5.9 uur</span>
+            </article>
+            <article class="entry-item" data-days="10" data-tags="pain,mental">
+              <strong>Zondag (vorige week)</strong>
+              <span>VAS 6/10 na belasting, motivatie lager</span>
+            </article>
+            <article class="entry-item" data-days="17" data-tags="activity">
+              <strong>Maandag (2 weken terug)</strong>
+              <span>7500 stappen zonder verergering</span>
+            </article>
+            <article class="entry-item" data-days="33" data-tags="pain,sleep">
+              <strong>Een maand terug</strong>
+              <span>VAS 7/10, nachtelijke pijn en korte slaap</span>
+            </article>
           </div>
+
+          <section class="empty-state" id="history-empty" hidden>
+            <h3>Geen logs in dit filter</h3>
+            <p>Kies een langere periode of een andere tag.</p>
+          </section>
         </section>
       </div>
     </main>
