@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recovery.health | Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="app-page" data-page="dashboard">
+    <header class="topbar app-topbar">
+      <div class="container nav-shell app-shell-narrow">
+        <a href="./index.html" class="brand" aria-label="Recovery.health home">
+          <span class="logo-box" aria-hidden="true">
+            <svg viewBox="0 0 100 100" role="img">
+              <path
+                d="M8 56h18l8-26 13 45 12-26h33"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </span>
+          <span>Recovr.</span>
+        </a>
+
+        <nav class="icon-nav" aria-label="App navigatie">
+          <a href="./dashboard.html" data-page-link="dashboard" title="Dashboard" aria-label="Dashboard">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 16l4-4 3 3 6-7 3 3" /></svg>
+          </a>
+          <a href="./knowledge-tree.html" data-page-link="knowledge" title="Knowledge Tree" aria-label="Knowledge Tree">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h14v14H5z" /><path d="M12 5v14" /></svg>
+          </a>
+          <a href="./intake.html" data-page-link="intake" title="Profiel" aria-label="Profiel">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3" /><path d="M5.5 19c1.4-3 3.6-4.5 6.5-4.5S17 16 18.5 19" /></svg>
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="app-main">
+      <div class="app-shell">
+        <section class="dash-head">
+          <div>
+            <p class="eyebrow">Mijn herstel</p>
+            <h1>Welkom terug!</h1>
+          </div>
+          <div class="dash-head-actions">
+            <button class="btn btn-primary" type="button">Log vandaag</button>
+            <button class="btn btn-ghost" type="button">Export voor Arts</button>
+          </div>
+        </section>
+
+        <section class="dash-grid">
+          <article class="timeline-card">
+            <div class="panel-head">
+              <h2>Voortgang Tijdlijn</h2>
+              <span class="badge positive">Op schema</span>
+            </div>
+            <div class="timeline-placeholder">
+              <span>W1</span>
+              <span>W2</span>
+              <span>W3</span>
+              <span>W4</span>
+              <span>W5</span>
+              <span>W6</span>
+              <span>W7</span>
+            </div>
+            <div class="metric-row">
+              <div><small>Mobiliteit</small><strong>75 deg</strong></div>
+              <div><small>Pijn (VAS)</small><strong>4/10</strong></div>
+              <div><small>Slaapkwaliteit</small><strong>7.2</strong></div>
+            </div>
+          </article>
+
+          <article class="focus-card">
+            <h2>Focus van deze week</h2>
+            <ul>
+              <li class="is-checked">Extensie (volledige strekking) bereiken.</li>
+              <li class="is-checked">Activeren van de quadriceps.</li>
+              <li>Beginnen met stationair fietsen.</li>
+            </ul>
+            <a href="./knowledge-tree.html" class="btn btn-ghost">Bekijk tips voor deze fase</a>
+          </article>
+        </section>
+
+        <section class="dash-bottom-grid">
+          <article class="info-card">
+            <h3>Nieuw in jouw fase</h3>
+            <div class="insight-item">
+              <span>Fysiek</span>
+              <strong>Zwelling beheersen</strong>
+              <small>124 mensen deelden dit</small>
+            </div>
+            <div class="insight-item">
+              <span>Mentaal</span>
+              <strong>Mentale dip in week 6</strong>
+              <small>89 mensen deelden dit</small>
+            </div>
+          </article>
+
+          <article class="info-card">
+            <h3>Checklist voor morgen (Fysio)</h3>
+            <div class="note-warning">Je gaf gisteren aan dat je pijn 7/10 was na het wandelen. Bespreek dit.</div>
+            <label class="check-row"><input type="checkbox" /> Vragen over kraken in de knie</label>
+            <label class="check-row"><input type="checkbox" /> Nieuwe schema voor week 6-8</label>
+          </article>
+        </section>
+      </div>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recovery.health | Intake</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="app-page" data-page="intake">
+    <header class="topbar app-topbar">
+      <div class="container nav-shell app-shell-narrow">
+        <a href="./index.html" class="brand" aria-label="Recovery.health home">
+          <span class="logo-box" aria-hidden="true">
+            <svg viewBox="0 0 100 100" role="img">
+              <path
+                d="M8 56h18l8-26 13 45 12-26h33"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </span>
+          <span>Recovr.</span>
+        </a>
+
+        <nav class="mini-links">
+          <a href="./index.html">Overview</a>
+          <a href="./dashboard.html">Dashboard</a>
+          <a href="./knowledge-tree.html">Knowledge Tree</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="app-main">
+      <div class="app-shell intake-wrap">
+        <header class="app-title-block">
+          <h1>Stel je kompas in</h1>
+          <p>We matchen je aan relevante ervaringen op basis van jouw specifieke situatie.</p>
+        </header>
+
+        <div class="step-meter" aria-hidden="true">
+          <span class="is-done"></span>
+          <span class="is-done"></span>
+          <span></span>
+        </div>
+
+        <section class="intake-card">
+          <label for="diagnose" class="field-title">Wat is je diagnose?</label>
+          <select id="diagnose" class="field-input">
+            <option selected>Voorste Kruisband (VKB) Reconstructie</option>
+            <option>Meniscus reparatie</option>
+            <option>Hernia (Lage rug)</option>
+            <option>Post-COVID Syndroom</option>
+          </select>
+
+          <div class="field-title">Welke fase zit je in?</div>
+          <div class="phase-list">
+            <button class="phase-chip is-active" type="button">Week 0-4 (Net geopereerd)</button>
+            <button class="phase-chip" type="button">Week 4-8 (Mobiliseren)</button>
+            <button class="phase-chip" type="button">Week 8-24 (Krachtopbouw)</button>
+            <button class="phase-chip" type="button">Return to Sport</button>
+          </div>
+
+          <label for="goal" class="field-title">Wat is je belangrijkste doel?</label>
+          <input id="goal" class="field-input" type="text" placeholder="Bv: Weer kunnen voetballen, traplopen zonder pijn..." />
+
+          <a href="./dashboard.html" class="btn btn-primary field-btn">Start mijn Dashboard</a>
+        </section>
+      </div>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
